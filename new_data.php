@@ -3,7 +3,7 @@ $since = (isset($_GET['string'])) ? $_GET['string'] : 0;
 $since = abs(intval($since));
 $string = $_GET['string'];
 $eventid = $_GET['eventid'];
-$sql = "SELECT `id`, `username`, `content`, FROM_UNIXTIME(`time-submitted`, '%k:%i GMT') as time FROM `comments` WHERE `event-id` = :eventid AND `id` > :string";
+$sql = "SELECT `id`, `username`, `content`, `time-submitted` as time FROM `comments` WHERE `event-id` = :eventid AND `id` > :string";
 include 'functions.php';
 $latest = NULL; // For working out most recent update
 $query = $dbh->prepare($sql);
@@ -12,6 +12,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 $numrows = count($result);
 if ($numrows > 0) {
   foreach ($result as $row) {
+    $row['time'] = gmdate('H:i T', $row['time']);
     $latest[] = $row;
   }
  }
