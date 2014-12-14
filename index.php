@@ -7,7 +7,7 @@ if (isset($_GET['page'])) { $page = $_GET['page']; } else { $page = NULL; }
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Noelinho.org live comments</title>
+  <title>Live events | slevin.org.uk</title>
   <meta name="description" content="The new live comments site for noelinho.org">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
   <link rel="stylesheet" href="/assets/css/style.min.css">
@@ -84,7 +84,7 @@ if (isset($_GET['page'])) { $page = $_GET['page']; } else { $page = NULL; }
 	  © Noel Slevin, 2005 – 2014. All rights reserved.
     </p>
   </footer>
-  <script src="/assets/js/comments.noelinho.org.js"></script>
+  <script src="/assets/js/events.slevin.org.uk.min.js"></script>
   <?php 
     if (($page != NULL) && (time() > $commentsopen) && (time() < $commentsclose)) {
       echo "<script src=\"/polling.js\"></script>";
