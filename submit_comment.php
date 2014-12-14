@@ -13,7 +13,7 @@ $unixtime = time('now');
 $eventid = $_POST['eventid'];
 $ip = $_SERVER['REMOTE_ADDR'];
 
-if ((ctype_digit($eventid)) && (strlen($name) > 0) && (strlen($content) > 0)) {
+if ((ctype_digit($eventid)) && (strlen(trim($name)) > 0) && (strlen(trim($content)) > 0)) {
   // Eventid is a valid number
   $sql = "INSERT INTO `comments` (`event-id`, `username`, `content`, `time-submitted`, `ip-address`) VALUES (:eventid, :name, :content, :unixtime, :ip)";
   $query = $dbh->prepare($sql);
