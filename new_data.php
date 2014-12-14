@@ -4,7 +4,7 @@ $since = abs(intval($since));
 $string = $_GET['string'];
 $eventid = $_GET['eventid'];
 $sql = "SELECT `id`, `username`, `content`, FROM_UNIXTIME(`time-submitted`, '%k:%i GMT') as time FROM `comments` WHERE `event-id` = :eventid AND `id` > :string";
-include '../functions.php';
+include 'functions.php';
 $latest = NULL; // For working out most recent update
 $query = $dbh->prepare($sql);
 $query->execute(array(':eventid' => $eventid, ':string' => $string));
