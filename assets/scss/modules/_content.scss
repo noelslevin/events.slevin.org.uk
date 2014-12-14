@@ -1,0 +1,21 @@
+/*-----------------------------------*\
+
+  Module: content
+
+  High-level styles for the main
+  content
+
+\*-----------------------------------*/
+
+body {
+  margin: 0;
+}
+
+.main-header, .article-header, .external-links-item, .link a {
+  background: #34495e;
+}
+
+.article-header {
+  padding: 5px 0;
+  border-bottom: 1px solid #aaa;
+}

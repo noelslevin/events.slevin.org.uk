@@ -1,0 +1,24 @@
+/*-----------------------------------*\
+
+  Partial: all
+
+  Imports all abstracted components
+  and helpers
+
+\*-----------------------------------*/
+
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "helpers";
+@import "layout";
+@import "objects";
+@import "typography";
+@import "images";
+@import "tables";
+@import "forms";
+@import "animations";
+
+// Group: development
+// Include only in dev environments
+@import "debug";

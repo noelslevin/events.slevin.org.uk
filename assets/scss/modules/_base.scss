@@ -1,0 +1,16 @@
+/*-----------------------------------*\
+
+  Module: base
+
+  High-level styles. Basically just
+  the html/:root element.
+
+\*-----------------------------------*/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

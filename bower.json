@@ -1,0 +1,15 @@
+{
+  "name": "belt",
+  "version": "0.1.0",
+  "main": "\"/assets/css/style.css\"",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}

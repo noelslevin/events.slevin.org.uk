@@ -1,0 +1,539 @@
+@charset "CP850";
+
+
+/*-----------------------------------*\
+
+  Root: style.scss
+
+  Imports all required SCSS files.
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: variables
+
+  Global variables of all kinds
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Module: base
+
+  High-level styles. Basically just
+  the html/:root element.
+
+\*-----------------------------------*/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*-----------------------------------*\
+
+  Partial: all
+
+  Imports all abstracted components
+  and helpers
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: variables
+
+  Global variables of all kinds
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: mixins
+
+  Site-wide mixin definitions
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: reset
+
+  An overzealous CSS reset
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: helpers
+
+  Helper classes for allsorts
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: layout
+
+  Layout rules
+
+\*-----------------------------------*/
+
+/*@import "grid";*/
+
+.main-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box {
+  margin: 10px;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+}
+
+.external-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+}
+
+.external-links-item {
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.comment {
+  border: 1px solid #34495e;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.comment h3 {
+  background: #16a085;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+}
+
+.comment-box {
+  border: 1px solid #34495e;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.comment-header {
+  background: #16a085;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 10px;
+}
+
+small {
+  font-weight: normal;
+}
+
+@media (min-width: 800px) {
+  .external-links {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
+
+/*-----------------------------------*\
+
+  Partial: objects
+
+  Abstractions that can't be categorised
+  anywhere else
+
+\*-----------------------------------*/
+
+label,
+textarea {
+  display: block;
+}
+
+input,
+textarea {
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+  max-width: 400px;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  width: auto;
+  margin: 10px;
+}
+
+label {
+  margin: 0 10px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.link {
+  margin: 5px;
+}
+
+.link a {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 1px solid #000;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#message {
+  background: #16A085;
+  padding: 10px;
+  color: #fff;
+}
+
+/*-----------------------------------*\
+
+  Partial: typography
+
+  Type styles
+
+\*-----------------------------------*/
+
+@font-face {
+  font-family: "Exo-Black-Webfont";
+  src: url("../fonts/exo-black-webfont.woff") format("woff");
+}
+
+body {
+  font-family: Calibri, Verdana, sans-serif;
+}
+
+header a:link,
+header a:visited {
+  color: #fff;
+}
+
+header h1 {
+  font-family: "Exo-Black-Webfont";
+}
+
+header,
+.external-links-item a {
+  color: #FFF;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 10px;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.details {
+  margin-top: 0;
+  font-size: smaller;
+}
+
+.section-text {
+  margin: 10px 20px;
+}
+
+.section-heading {
+  margin: 10px;
+  padding: 10px;
+  background: #34495e;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.title {
+  margin: 20px;
+}
+
+.title {
+  font-size: 40px;
+}
+
+a.upcoming-link {
+  font-weight: bold;
+  color: #000;
+}
+
+.info {
+  padding: 10px;
+  background: #34495e;
+  color: #fff;
+  border-radius: 5px;
+}
+
+@media (min-width: 500px) {
+  .title {
+    font-size: 60px;
+  }
+}
+
+/*-----------------------------------*\
+
+  Partial: images
+
+  Sprite and image helpers should go here
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Partial: tables
+
+  Table styling
+
+\*-----------------------------------*/
+
+table {
+  border-collapse: collapse;
+  margin: 10px;
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px);
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+td {
+  border-top: 2px solid #34495e;
+  font-size: smaller;
+}
+
+th {
+  text-align: left;
+}
+
+/*-----------------------------------*\
+
+  Partial: forms
+
+  Form & form element styles
+
+\*-----------------------------------*/
+
+/*.debug-outline {
+  * {
+    outline: 1px dotted rgba(0,0,0,.1);
+    outline-offset: -1px;
+
+    &:hover {
+      outline-color: red;
+    }
+  }
+}*/
+
+/*-----------------------------------*\
+
+  Partial: animations
+
+  Animation definitions
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Module: all
+
+  Imports modules. Modules are site-
+  and page-specific styles that cannot
+  be easily abstracted.
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Module: base
+
+  High-level styles. Basically just
+  the html/:root element.
+
+\*-----------------------------------*/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*-----------------------------------*\
+
+  Module: code
+
+  Code highlighting styles
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+
+  Module: header
+
+  High-level styles for the header
+
+\*-----------------------------------*/
+
+.title {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+/*-----------------------------------*\
+
+  Module: content
+
+  High-level styles for the main
+  content
+
+\*-----------------------------------*/
+
+body {
+  margin: 0;
+}
+
+.main-header,
+.article-header,
+.external-links-item,
+.link a {
+  background: #34495e;
+}
+
+.article-header {
+  padding: 5px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+/*-----------------------------------*\
+
+  Module: footer
+
+  High-level styles for the footer
+
+\*-----------------------------------*/
+
+.copyright {
+  font-size: smaller;
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding: 10px 0;
+}
+
+/*===================================*\
+
+  Sass Authoring Rules
+  --------------------
+
+  Some basic guidelines (that may be broken) for authoring manageable, readable Sass styles:
+
+  .block {
+    // 1. Layout Properties
+    // display, width, padding, margin, vertical-align, box-sizing, etc.
+    // Note: Bracketed expression values — such as calc() or linear-gradient() — must have spaces [e.g. calc( 100% + 2rem )] for Grunt tasks to run properly
+
+    // 2. Typography Properties
+    // font[-size, -weight, etc], line-height, text-align, letter-spacing, white-space, etc.
+
+    // 3. Appearance Properties
+    // color, box-shadow, background, border, text-shadow, opacity, etc.
+
+    // 4. UI Properties
+    // appearance, cursor, pointer-events, etc.
+
+    // Child elements are not always (and shouldn't be) nested in the parent block
+    .block__child {
+
+      // Modifiers are almost always nested in their parent element
+      &.block__child--modifier {
+
+      }
+
+      &:after {
+        // `content` counts as a layout property
+      }
+
+    }
+  }
+
+  Full Example:
+
+  .block {
+    width: 100%;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: $highlight;
+
+    .block__child {
+      display: inline-block;
+
+      &.block__child--modifier {
+        color: $gray;
+      }
+
+      &:after {
+        content: '';
+        padding: 1.5rem;
+
+        cursor: pointer;
+      }
+    }
+  }
+
+  If you want to pick a fight over/learn more about these rules, let me know – dan.eden@me.com
+
+\*===================================*/

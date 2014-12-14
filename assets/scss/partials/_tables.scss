@@ -1,0 +1,26 @@
+/*-----------------------------------*\
+
+  Partial: tables
+
+  Table styling
+
+\*-----------------------------------*/
+
+table {
+  border-collapse: collapse;
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+
+th, td {
+  padding: 5px;
+}
+
+td {
+  border-top: 2px solid #34495e;
+  font-size: smaller;
+}
+
+th {
+  text-align: left;
+}

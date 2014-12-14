@@ -1,0 +1,81 @@
+/*-----------------------------------*\
+
+  Partial: layout
+
+  Layout rules
+
+\*-----------------------------------*/
+
+/*@import "grid";*/
+
+.main-header {
+  display: flex;
+}
+
+.box {
+  margin: 10px;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+}
+
+.external-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+}
+
+.external-links-item {
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.comment {
+  border: 1px solid #34495e;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.comment h3 {
+  background: #16a085;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+}
+
+.comment-box {
+  border: 1px solid #34495e;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.comment-header {
+  background: #16a085;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 10px;
+}
+
+small {
+  font-weight: normal;
+}
+
+@media (min-width: 800px) {
+  .external-links {
+     -webkit-column-count: 4;
+        -moz-column-count: 4;
+             column-count: 4;
+  }
+}
