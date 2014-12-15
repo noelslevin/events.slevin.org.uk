@@ -10,6 +10,7 @@ if (isset($_GET['page'])) { $page = $_GET['page']; } else { $page = NULL; }
   <title>Live events | slevin.org.uk</title>
   <meta name="description" content="The new live comments site for noelinho.org">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <link rel="apple-touch-icon" href="/icon.png">
   <link rel="stylesheet" href="/assets/css/style.min.css">
 </head>
 <body>  
