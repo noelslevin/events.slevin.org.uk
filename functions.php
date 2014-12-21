@@ -57,7 +57,7 @@ function comments($dbh, $eventid) {
     $output .= "<div id=\"comments\">\n";
   if ($numrows > 0) {
     foreach ($result as $row) {
-      $time = gmdate('H:i T', $row['time']);
+      $time = gmdate('H:i:s T', $row['time']);
       $output .= "<div class=\"comment\" data-last-id=\"".$row['id']."\">\n";
       $output .= "<p class=\"comment-header\">".$row['username']." <small>(".$time.")</small></p>\n";
       $output .= "<p>".$row['content']."</p>\n";
