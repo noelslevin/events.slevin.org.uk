@@ -20,6 +20,8 @@ $(function ($) {
           html += "<p>" + v.content + "</p>";
           html += "</div>";
           div.append(html);
+          var snd = new Audio("/notification.mp3");
+          snd.play();
         });
         setTimeout(polling, 10e3);
       }
