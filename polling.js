@@ -2,7 +2,7 @@
 $(function ($) {
   "use strict";
   (function polling() {
-    var latest, eventid;
+    var latest, eventid, number = 0, snd = new Audio("/notification.mp3");
     latest = $("#comments").find("div:last-child").data("last-id") || 0;
     eventid = $("#main-content").find("article:first-child").data("event-id") || 0;
     $.ajax({
@@ -20,9 +20,13 @@ $(function ($) {
           html += "<p>" + v.content + "</p>";
           html += "</div>";
           div.append(html);
-          var snd = new Audio("/notification.mp3");
-          snd.play();
+          if (localStorage.getItem("username") !== v.username) {
+            number = number + 1;
+          }
         });
+        if (number > 0) {
+          snd.play();
+        }
         setTimeout(polling, 10e3);
       }
     });
