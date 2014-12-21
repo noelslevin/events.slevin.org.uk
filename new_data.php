@@ -12,7 +12,7 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 $numrows = count($result);
 if ($numrows > 0) {
   foreach ($result as $row) {
-    $row['time'] = gmdate('H:i T', $row['time']);
+    $row['time'] = gmdate('H:i:s T', $row['time']);
     $latest[] = $row;
   }
  }
