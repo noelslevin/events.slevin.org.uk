@@ -82,7 +82,7 @@ if (isset($_GET['page'])) { $page = $_GET['page']; } else { $page = NULL; }
     </ul>-->
   
     <p class="copyright">
-	  © Noel Slevin, 2005 – 2014. All rights reserved.
+	  © Noel Slevin, 2005 – <?php echo date('Y'); ?>. All rights reserved.
     </p>
   </footer>
   <script src="/assets/js/events.slevin.org.uk.min.js"></script>
